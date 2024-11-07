@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* モータルウィンドウ */
+
+.vacant h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.vacant p:first-of-type {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.vacant table {
+  width: 90%;
+  table-layout: auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.vacant-p {
+  text-align: center;
+  padding: 20px;
+  background: lightgrey;
+}
+
+.vacant td {
+  text-align: center;
+  height: 80px;
+  font-size: 24px;
+}
+
+.vacant p:last-of-type {
+  margin: 20px 0 0 40px;
+  font-size: 18px;
+}
+
+.money h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.money table {
+  width: 100%;
+  table-layout: auto;
+  margin-top: 20px;
+}
+
+.money th,
+.money td {
+  padding: 16px 8px 16px 8px;
+}
+
+.money th {
+  background: lightgrey;
+}
+
+.money td {
+  text-align: center;
+  height: 60px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.basic {
+  font-size: 18px;
+  font-weight: bold;
+  background: skyblue;
+  text-align: center;
+}
+
+.addition {
+  font-size: 18px;
+  font-weight: bold;
+  background: pink;
+  text-align: center;
+}
+
+.money table:last-of-type {
+  margin-top: 60px;
+  height: 40px;
+}
+
+/* .header-cell {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+} */
+
+/* モーダルウィンドウ */
+
+#mask {
+  background: rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  width: 50%;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform .4s;
+  z-index: 2;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -4000px);
+}
+
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 32px auto 0;
+}
+
+/* ✕ボタン */
+
+#cross {
+  display: block;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #333;
+  /* 枠の調整 */
+  border-radius: 50%;
+  /* 丸みの度合い */
+  background: #fff;
+  /* ボタンの背景色 */
+}
+
+#cross::before,
+#cross::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  /* 棒の幅（太さ） */
+  height: 22px;
+  /* 棒の高さ */
+  background: #333;
+  /* バツ印の色 */
+}
+
+#cross::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#cross::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* メディアクエリ― */
+
+@media (max-width: 800px) {
+  .vacant table {
+    width: 90%;
+    table-layout: fixed;
+  }
+
+  .vacant-p {
+    font-size: 14px;
+    align-items: center;
+  }
+  
+  .vacant td  {
+    font-size: 14px;
+  }
+}

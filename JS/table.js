@@ -20,7 +20,7 @@ thead.appendChild(tr);
 table.appendChild(thead);
 
 // データの配列
-const data = [1, 0, 0, 0, 1, 1];  
+const data = [2, 0, 0, 0, 2, 1];  
 
 // テーブル本体の作成
 const tbody = document.createElement('tbody');

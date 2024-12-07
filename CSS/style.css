@@ -486,6 +486,27 @@ h3 + p {
   margin-top: 30px;
 }
 
+/* リンク一覧 */
+
+.link {
+  width: 80%;
+  margin: 80px auto 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.link img {
+  object-fit: contain;
+  margin-top: 48px;
+  width: 250px;
+  height: 80px;
+}
+
+.link p {
+  margin-top: 8px;
+}
 
 /* 地図 */
 
@@ -494,7 +515,7 @@ h3 + p {
   padding-top: 100px;
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 
@@ -543,7 +564,7 @@ footer a:active {
 
 /* メディアクエリ― */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .head h1 {
     margin: 0 auto;
   }
@@ -623,6 +644,10 @@ footer a:active {
 
   .pic3 {
     margin: -20px auto 70px;
+  }
+
+  .link {
+    display: block;
   }
 
   .map1 {

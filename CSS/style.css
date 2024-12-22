@@ -495,9 +495,18 @@ h3 + p {
 
 /* リンク一覧 */
 
-.link {
+.cooperation {
   width: 80%;
   margin: 80px auto 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+.link {
+  width: 80%;
+  margin: 10px auto 0;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -514,6 +523,172 @@ h3 + p {
 .link p {
   margin-top: 8px;
 }
+
+.clinic {
+  width: 320px;
+  height: 90px;
+  display: flex;
+  border-radius: 8px;
+  background: darkblue;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clinic span {
+  width: 30px;
+  height: 30px;
+  margin: 8px 34px 8px 18px;
+  background: white;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+.clinic span::after {
+  content: "";
+  outline: 8px solid yellow;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  bottom: 0;
+  left: -10px;
+  right: 0;
+}
+
+.cross-border {
+  content: "";
+  border: 20px solid yellow;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 33px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+
+.type {
+  font-size: 16px;
+
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.healthcare {
+  width: 320px;
+  height: 90px;
+  display: flex;
+  border-radius: 8px;
+  background: pink;
+  color: darkred;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.corporation {
+  font-size: 12px;
+}
+
+.health {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.triangle {
+  width: 10px;
+  height: 0;
+  margin: 24px 8px 0 8px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid darkred;
+  position: relative;
+}
+
+
+.triangle2 {
+  width: 8px;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 38px solid white;
+  position: absolute;
+  top: 40px;
+  left: 24.5px;
+  z-index: 1;
+}
+
+
+.heart {
+  border-radius: 25%;
+  position: absolute;
+  top: 18px;
+  left: 45px;
+  width: 10px;
+  height: 10px;
+  background-color: darkred;
+  transform: rotate(-45deg); /* ハートの形を作るために回転 */
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: darkred;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -8px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 8px; /* 右側に配置 */
+}
+
+.heart2 {
+  position: absolute;
+  border-radius: 50%;
+  top: 19px;
+  left: 46.5px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  transform: rotate(-45deg); /* ハートの形を作るために回転 */
+}
+
+.heart2::before,
+.heart2::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.heart2::before {
+  top: -4px;
+  left: 0;
+}
+
+.heart2::after {
+  top: 0;
+  left: 4px; /* 右側に配置 */
+}
+
 
 
 /* 地図 */
@@ -652,6 +827,18 @@ footer a:active {
 
   .pic3 {
     margin: -20px auto 70px;
+  }
+
+  .cooperation {
+    display: block;
+  }
+
+  .clinic {
+    margin:  40px auto 0;
+  }
+
+  .healthcare {
+    margin:  20px auto 0;
   }
 
   .link {

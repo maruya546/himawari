@@ -49,7 +49,7 @@
   table.appendChild(thead);
 
   // データの配列
-  const data = [0, 0, 0, 0, 0, 1];
+  const data = [0, 0, 0, 0, 0, 0];
 
   // テーブル本体の作成
   const tbody = document.createElement('tbody');

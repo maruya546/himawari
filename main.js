@@ -33,12 +33,10 @@
 {
   const table = document.getElementById('vacant');
 
-  // ヘッダー行を作成
   const thead = document.createElement('thead');
   const tr = document.createElement('tr');
   const days = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
 
-  // 曜日の列を作成
   days.forEach(day => {
     const th = document.createElement('th');
     th.textContent = day;
@@ -48,13 +46,10 @@
   thead.appendChild(tr);
   table.appendChild(thead);
 
-  // データの配列
-  const data = [0, 0, 0, 0, 0, 0];
+  const data = [1, 0, 1, 0, 1, 1];
 
-  // テーブル本体の作成
   const tbody = document.createElement('tbody');
 
-  // 1行目の作成
   const row1 = document.createElement('tr');
   data.forEach(value => {
     const cell = document.createElement('td');
@@ -63,7 +58,6 @@
   });
   tbody.appendChild(row1);
 
-  // 2行目の作成
   const row2 = document.createElement('tr');
   data.forEach(value => {
     const cell = document.createElement('td');
@@ -72,11 +66,7 @@
   });
   tbody.appendChild(row2);
 
-  // テーブルにtbodyを追加
   table.appendChild(tbody);
-
-  // テーブルを任意の要素に追加（例えば、body）
-  document.body.appendChild
 }
 
 // スライドショー関連の処理

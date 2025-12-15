@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* クリック時の挙動制御 */
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;

@@ -17,7 +17,7 @@
   thead.appendChild(tr);
   table.appendChild(thead);
 
-  const data = [0, 0, 2, 0, 0, 0];
+  const data = [1, 1, 2, 0, 1, 0];
 
   const tbody = document.createElement('tbody');
 
@@ -77,31 +77,69 @@
 
 // 重要事項説明書群
 
-const importantItems = [
-  { label: "運営規定", file: "file/運営規定.pdf" },
-  { label: "通所介護", file: "file/地域密着型通所介護重要事項説明書.pdf" },
-  { label: "総合支援", file: "file/総合支援事業重要事項説明書.pdf" }
+const pdfCategories = [
+  {
+    container: ".important-links",
+    items: [
+      { label: "運営規定", file: "file/運営規定.pdf" },
+      { label: "通所介護", file: "file/地域密着型通所介護重要事項説明書.pdf" },
+      { label: "総合支援", file: "file/総合支援事業重要事項説明書.pdf" }
+    ]
+  },
+  {
+    container: ".addition-links",
+    items: [
+      { label: "加算一覧", file: "file/加算一覧.pdf" }
+    ]
+  },
+  {
+    container: ".plan-links",
+    items: [
+      { label: "運営推進", file: "file/令和７年度運営推進会議資料.pdf" }
+    ]
+  },
+  {
+    container: ".report-links",
+    items: [
+      { label: "運営推進", file: "file/令和７年度運営推進会議報告書.pdf" }
+    ]
+  },
+
+  // ★ここに新しいカテゴリを追加するだけでOK！
+  // {
+  //   container: ".new-category-links",
+  //   items: [
+  //     { label: "〇〇書類", file: "file/〇〇.pdf" }
+  //   ]
+  // }
 ];
 
-const container = document.querySelector(".important-links");
+function createPdfLinks(items, containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-importantItems.forEach(item => {
-  const link = document.createElement("a");
-  link.href = item.file;
-  link.className = "pdf-link";
-  link.download = true;
-  link.target = "_blank";
+  items.forEach(item => {
+    const link = document.createElement("a");
+    link.href = item.file;
+    link.className = "pdf-link";
+    link.download = true;
+    link.target = "_blank";
 
-  const icon = document.createElement("img");
-  icon.src = "img/pdf-icon.png";
-  icon.alt = "pdfアイコン";
-  icon.className = "pdf-icon";
+    const icon = document.createElement("img");
+    icon.src = "img/pdf-icon.png";
+    icon.alt = "pdfアイコン";
+    icon.className = "pdf-icon";
 
-  const text = document.createElement("span");
-  text.className = "pdf-text";
-  text.textContent = item.label;
+    const text = document.createElement("span");
+    text.className = "pdf-text";
+    text.textContent = item.label;
 
-  link.appendChild(icon);
-  link.appendChild(text);
-  container.appendChild(link);
+    link.appendChild(icon);
+    link.appendChild(text);
+    container.appendChild(link);
+  });
+}
+
+pdfCategories.forEach(category => {
+  createPdfLinks(category.items, category.container);
 });

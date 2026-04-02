@@ -122,7 +122,7 @@ function createPdfLinks(items, containerSelector) {
     const link = document.createElement("a");
     link.href = item.file;
     link.className = "pdf-link";
-    link.download = true;
+    // link.download = true;
     link.target = "_blank";
 
     const icon = document.createElement("img");

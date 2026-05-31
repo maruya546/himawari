@@ -17,7 +17,7 @@
   thead.appendChild(tr);
   table.appendChild(thead);
 
-  const data = [1, 1, 2, 0, 2, 1];
+  const data = [0, 1, 2, 0, 2, 1];
 
   const tbody = document.createElement('tbody');
 

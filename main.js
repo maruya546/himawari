@@ -89,7 +89,8 @@ const pdfCategories = [
   {
     container: ".addition-links",
     items: [
-      { label: "料金表", file: "file/料金表.pdf" }
+      { label: "料金表", file: "file/料金表.pdf" },
+      { label: "チラシ", file: "file/チラシ.pdf" }
     ]
   },
   {
